@@ -1,12 +1,24 @@
 package com.dataJpa.modal;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+
+@Entity
+@Table
 public class Pen {
 	
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Pid;
 	private int pprice;
 	private String pname;
 	private String pcolour;
+	
+	
 	public int getPid() {
 		return Pid;
 	}
@@ -37,7 +49,7 @@ public class Pen {
 	}
 	public Pen(int pid, int pprice, String pname, String pcolour) {
 		super();
-		this .Pid = pid;
+//		this .Pid = pid;
 		this.pprice = pprice;
 		this.pname = pname;
 		this.pcolour = pcolour;

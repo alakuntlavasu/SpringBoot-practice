@@ -1,10 +1,11 @@
 package com.dataJpa.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.dataJpa.modal.Bus;
 import com.dataJpa.repo.Busrepo;
-
+@Component
 public class Busservice 
 {
    @Autowired
